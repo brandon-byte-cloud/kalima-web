@@ -1,0 +1,272 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.fondo{
+  background: rgb(223, 207, 190);
+}
+#contenido{
+    display: flex;
+    margin-top: 15px;
+    gap: 30px;
+    margin: 60px;
+    
+}
+.imagen-texto a {
+    display: flex;
+    color: inherit; /* mantiene el color del texto */
+    text-decoration: none;
+}
+.color {
+    background-color: #93512D;
+    padding: 15px;
+    color: #F6F4F4;
+    font-size: 20px;
+}
+.inf {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap; 
+    gap: 16px;
+   
+}
+.separador img{
+    width:100%;
+    padding: 20px;
+    height: 300px;
+    margin-top: 70px;
+   
+}
+.imagen-texto {
+    display: flex; 
+    flex-wrap: wrap;
+    margin-top: 10px; 
+    gap: 5px;
+    padding: 8px;
+    border: solid 0.1px gray ;
+    background: rgb(223, 207, 190);
+    margin-top: 90px;
+}
+.texto{
+    width: auto;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.imagen-texto:hover {
+    border: solid 3px;
+}
+.imagen-texto img {
+    width: 120px;     
+}
+.recorrido {
+    background: #F6F4F4;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    color: #9A5200;
+}
+
+/* Texto arriba */
+.posicion {
+    font-size: 25px;
+}
+
+/* Línea */
+.recorrido hr {
+    width: 70%;
+    height: 4px;
+    background-color: #93512D;
+    border: none;
+}
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    gap: 20px;
+
+}
+
+/* Botones */
+.seccion {
+    border: #93512D solid 2px;
+    padding: 10px 15px;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    color: #9A5200;
+}
+.seccion:hover{
+    color: #F6F4F4;
+    background: #93512D;
+}
+.galeria{
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+.galeria hr{
+    width: 60%;
+    height: 4px;
+    background-color: #93512D;
+    border: none;
+    
+}
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    
+}
+.menu{
+    grid-column: 1/3;
+    
+
+}
+.menu p{
+    border-bottom: #9A5200 solid 1px;
+}
+.menu p:hover{
+    background: #e0c3c3;
+   
+}
+.evidencia{
+    grid-column: 3/7;
+}
+.evidencia img{
+    width: 350px;
+    height: 250px;
+    margin: 12px;
+    border: #9A5200 solid 1px;
+}
+.evidencia img:hover{
+    background-color: rgba(212, 218, 224, 0.407);
+}
+/* ======== TABLET ======== */
+@media (max-width: 800px) {
+    body{
+        padding: 20px;
+    }
+    #contenido {
+        flex-direction: column;
+        margin: 30px;
+        gap: 30px;
+    }
+
+    .inf {
+        justify-content: center;
+    }
+
+    .imagen-texto img {
+        width: 110px;
+    }
+
+    /* Galería */
+    .imagenes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .menu {
+        grid-column: 1 span 2; /* el menú ocupa todo arriba */
+        text-align: center;
+    }
+    .evidencia {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .evidencia img {
+        width: 250px;
+        height: auto;
+    }
+}
+/* ======== CELULAR ======== */
+@media (max-width: 600px) {
+
+    body{
+        padding: 15px;
+    }
+
+    #contenido {
+        flex-direction: column;
+        margin: 20px 10px;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .color img{
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+
+    .navbar{
+        width: 100%;
+    }
+
+    .inf {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagen-texto {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .imagen-texto img {
+        width: 90px;
+        margin: auto;
+    }
+
+    /* Recorrido */
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .seccion {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Galería */
+    .imagenes {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .menu {
+        grid-column: 1;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .evidencia {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evidencia img {
+        width: 90%;
+        height: auto;
+    }
+
+    .posicion {
+        font-size: 18px;
+    }
+}
